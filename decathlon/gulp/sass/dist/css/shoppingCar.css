@@ -1,0 +1,163 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 2160px;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* header */
+
+#header {
+    width: 2160px;
+    height: 81px;
+    position: relative;
+    background-color: #fff;
+}
+
+#header article:nth-child(1) {
+    width: 173px;
+    height: 82px;
+    float: left;
+    position: absolute;
+    left: 0;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 82px;
+}
+
+#header article:nth-child(2) {
+    width: 326px;
+    height: 46px;
+    position: absolute;
+    left: 873px;
+    top: 15px;
+}
+
+#header article:nth-child(3) {
+    position: absolute;
+    right: 0;
+}
+
+#body {
+    width: 2160px;
+    min-height: 657px;
+    background-color: #edeff1;
+    position: relative;
+}
+
+#body article:nth-child(1) {
+    width: 1026px;
+    height: 39px;
+    position: absolute;
+    left: 173px;
+    top: 100px;
+}
+
+#body article:nth-child(1) span {
+    font-size: 35px;
+    color: #9a938e;
+}
+
+#body article:nth-child(1) span:nth-child(1) {
+    color: #545a63;
+}
+
+#body article:nth-child(1) svg {
+    font-size: 21px;
+    color: #9a938e;
+}
+
+#body article:nth-child(2) {
+    width: 1069px;
+    height: 18px;
+    position: absolute;
+    left: 202px;
+    top: 208px;
+}
+
+#body article:nth-child(2) span {
+    font-size: 18px;
+    color: #c8c9cb;
+}
+
+#body article:nth-child(2) span:nth-child(2) {
+    position: absolute;
+    left: 600px;
+}
+
+#body article:nth-child(2) span:nth-child(3) {
+    position: absolute;
+    left: 816px;
+}
+
+#body article:nth-child(2) span:nth-child(4) {
+    position: absolute;
+    right: 0;
+}
+
+#body article:nth-child(3) {
+    width: 1297px;
+    height: 216px;
+    position: absolute;
+    top: 245px;
+    left: 173px;
+}
+
+#body article:nth-child(4) {
+    width: 1297px;
+    height: 61px;
+    position: absolute;
+    top: 491px;
+    left: 173px;
+    display: flex;
+    align-items: center;
+}
+
+#body article:nth-child(4) span {
+    font-size: 20px;
+    font-weight: 900;
+    color: #454647;
+}
+
+#body article:nth-child(4) span:nth-child(2) {
+    position: absolute;
+    left: 839px;
+    font-size: 25px;
+}
+
+#body article:nth-child(4) span:nth-child(3) {
+    position: absolute;
+    left: 971px;
+    font-weight: 500;
+}
+
+#body article:nth-child(4) span:nth-child(4) {
+    width: 191px;
+    height: 61px;
+    background-color: #ffea28;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bottom {
+    width: 2160px;
+    height: 1424px;
+    background-color: #edeff1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}

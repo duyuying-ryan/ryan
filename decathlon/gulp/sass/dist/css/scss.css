@@ -1,0 +1,962 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 11089px;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* header */
+
+#header {
+    height: 81px;
+    width: 2160px;
+    background-color: red;
+    position: relative;
+}
+
+#header #classify {
+    width: 139px;
+    height: 81px;
+    float: left;
+    display: flex;
+    background-color: #edeff1;
+    position: relative;
+}
+
+#header #classify li {
+    float: left;
+    padding: .65em 1em;
+    background-color: #fff;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    position: relative;
+}
+
+#header li:hover {
+    background-color: deepPink;
+}
+
+#classify ul {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 150px;
+    display: none;
+    z-index: 1;
+}
+
+#classify ul li {
+    width: 100%;
+}
+
+#classify:hover ul {
+    display: block;
+}
+
+#header #classify #bi-right {
+    position: absolute;
+    top: 25px;
+    display: flex;
+    left: 30px;
+}
+
+#header #classify span {
+    font-size: 18px;
+    font-weight: 800;
+    color: #575859;
+    line-height: 81px;
+    position: relative;
+    left: 71px;
+    display: flex;
+}
+
+#header #logo-image {
+    width: 375px;
+    height: 81px;
+    background-color: #ffffff;
+    float: left;
+    display: flex;
+    position: relative;
+}
+
+#header #logo-image img {
+    width: 316px;
+    height: 45px;
+    display: flex;
+    position: absolute;
+    top: 21%;
+    left: 7.4%;
+}
+
+#header #search {
+    width: 1104px;
+    height: 81px;
+    background-color: #ffffff;
+    float: left;
+    display: flex;
+    position: relative;
+}
+
+#header #search section {
+    width: 1084px;
+    height: 53px;
+    background-color: #edeff1;
+    position: absolute;
+    display: flex;
+    top: 17%;
+}
+
+#header #search section aside {
+    width: 9.7%;
+    height: 93%;
+    display: flex;
+    background-color: #ffffff;
+    position: absolute;
+    right: 0;
+    border: 2px solid #e2e4e6;
+}
+
+#header #search section aside svg {
+    position: absolute;
+    top: 25.9%;
+    left: 37.8%;
+    color: #0082c3;
+    display: flex;
+}
+
+#header #aid {
+    width: 126px;
+    height: 77px;
+    background-color: #ffffff;
+    float: left;
+    display: flex;
+    border: 2px solid #eef0f2;
+    position: relative;
+}
+
+#header #aid svg {
+    color: #575859;
+    position: absolute;
+    left: 35px;
+    top: 30px;
+}
+
+#header #aid span {
+    color: #575859;
+    font-size: 19px;
+    position: absolute;
+    top: 27px;
+    left: 64px;
+}
+
+#header #shop {
+    width: 126px;
+    height: 77px;
+    display: flex;
+    background-color: #ffffff;
+    float: left;
+    border: 2px solid #eef0f2;
+    border-left: none;
+    position: relative;
+}
+
+#header #shop svg {
+    color: #575859;
+    position: absolute;
+    left: 35px;
+    top: 30px;
+}
+
+#header #shop span {
+    color: #575859;
+    font-size: 19px;
+    position: absolute;
+    top: 27px;
+    left: 64px;
+}
+
+#header #account {
+    width: 126px;
+    height: 77px;
+    display: flex;
+    background-color: #ffffff;
+    float: left;
+    border: 2px solid #eef0f2;
+    border-left: none;
+    border-right: none;
+    position: relative;
+}
+
+#header #account svg {
+    color: #575859;
+    position: absolute;
+    left: 35px;
+    top: 30px;
+}
+
+#header #account span {
+    color: #575859;
+    font-size: 19px;
+    position: absolute;
+    top: 27px;
+    left: 64px;
+}
+
+#header #shopping-trolley {
+    width: 158px;
+    height: 81px;
+    background-color: #ffea28;
+    float: right;
+    position: relative;
+}
+
+#header #shopping-trolley svg {
+    color: #575859;
+    position: absolute;
+    right: 104px;
+    top: 30px;
+}
+
+#header #shopping-trolley span {
+    color: #575859;
+    font-size: 20px;
+    position: absolute;
+    top: 29px;
+    right: 37px;
+}
+
+#header #shopping-trolley aside {
+    width: 26px;
+    height: 26px;
+    background-color: #0082c3;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    border-radius: 50%;
+}
+
+#header #shopping-trolley aside span {
+    font-size: 11px;
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    left: 9px;
+}
+
+a,
+a:hover,
+a:visited,
+a:link,
+a:active {
+    text-decoration: none;
+    color: #333;
+}
+
+.clearFix::after,
+.clearFix::before {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+section.banner {
+    width: 2160px;
+    height: 885px;
+    position: relative;
+    background-color: red;
+    /* overflow: hidden; */
+}
+
+.banner>ul {
+    width: 700%;
+    height: 100%;
+    background-color: pink;
+    position: absolute;
+    top: 0;
+    left: -2160px;
+}
+
+.banner>ul>li {
+    width: 2160px;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 100px;
+}
+
+.banner ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner>ol {
+    height: 15x;
+    width: 200px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner>ol>li {
+    width: 18px;
+    height: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    margin-left: 0;
+    margin-right: 6px;
+}
+
+.banner>ol>li.active {
+    width: 54px;
+    height: 15px;
+    background-color: #fff;
+}
+
+.banner>aside {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner>aside>a {
+    width: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* body */
+
+#selectBox {
+    width: 2160px;
+    height: 1228px;
+    background-color: #fff;
+    display: block;
+    position: relative;
+    display: flex;
+}
+
+#selectBox #select {
+    width: 1771px;
+    height: 1228px;
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#selectBox #select .selectTitle {
+    width: 1771px;
+    height: 277px;
+    background-color: #fff;
+    position: absolute;
+}
+
+#selectBox #select .selectTitle h1 {
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 174px;
+    position: absolute;
+    top: 102px;
+    left: 623px;
+}
+
+#selectBox #select .selTop {
+    width: 1771px;
+    height: 378px;
+    position: absolute;
+    top: 277px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#selectBox #select .selTop a {
+    width: 295.1px;
+    height: 378px;
+    display: flex;
+    background-color: #ffffff;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#selectBox #select .selTop a img {
+    width: 176px;
+    height: 170px;
+}
+
+#selectBox #select .selTop a span {
+    padding: 53px;
+    font-size: 27px;
+    color: #6e6e6e;
+}
+
+#selectBox #select .selT {
+    width: 1771px;
+    height: 378px;
+    position: absolute;
+    top: 655px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#selectBox #select .selT a {
+    width: 295.1px;
+    height: 378px;
+    display: flex;
+    background-color: #ffffff;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#selectBox #select .selT a img {
+    width: 176px;
+    height: 170px;
+}
+
+#selectBox #select .selT a span {
+    padding: 53px;
+    font-size: 27px;
+    color: #6e6e6e;
+}
+
+#selectBox #select .toSeeAll {
+    width: 1771px;
+    height: 195px;
+    background-color: #fff;
+    position: absolute;
+    top: 1033px;
+    display: flex;
+}
+
+#selectBox #select .toSeeAll .toSee {
+    width: 601px;
+    height: 69px;
+    margin: 28px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0082c3;
+    border-radius: 2px;
+}
+
+#selectBox #select .toSeeAll .toSee span {
+    font-size: 23px;
+    font-weight: 800;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.particularsBox {
+    width: 2159px;
+    height: 254px;
+    background-color: #f2f2f2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.particularsBox .particulars {
+    width: 1771px;
+    height: 197px;
+    background-color: #f2f2f2;
+    position: absolute;
+    display: flex;
+}
+
+.particularsBox .particulars aside {
+    width: 433px;
+    height: 197px;
+    padding-right: 14px;
+}
+
+.particularsBox .particulars aside img {
+    width: 100%;
+    height: 100%;
+}
+
+#match {
+    width: 2160px;
+    height: 3058px;
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#match aside {
+    width: 1771px;
+    height: 234px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+}
+
+#match aside span {
+    font-size: 60px;
+    font-weight: 900px;
+}
+
+#match .match1 {
+    width: 1771px;
+    height: 886px;
+    position: absolute;
+    top: 234px;
+    background-color: #fff;
+}
+
+#match .match1 .child {
+    width: 541px;
+    height: 886px;
+    position: absolute;
+}
+
+#match .match1 .child img {
+    width: 100%;
+    height: 100%;
+}
+
+#match .match1 .child .seeMore {
+    width: 246px;
+    height: 60px;
+    position: absolute;
+    background-color: #ffea28;
+    border-radius: 2px;
+    left: 147px;
+    bottom: 45px;
+}
+
+#match .match1 .child .seeMore span {
+    font-size: 21px;
+    color: #343433;
+    font-weight: 900;
+    position: absolute;
+    top: 16px;
+    left: 61px;
+}
+
+#match .match1 .pants {
+    width: 589px;
+    height: 429px;
+    position: absolute;
+    left: 565px;
+    border: 1px solid #dcdddd;
+}
+
+#match .match1 .pants .newPro {
+    width: 45px;
+    height: 25px;
+    position: absolute;
+    top: 33px;
+    left: 18px;
+    background-color: #8126a3;
+    font-size: 18px;
+    color: #fff;
+}
+
+#match .match1 .pants .price {
+    width: 128px;
+    height: 45px;
+    position: absolute;
+    top: 36px;
+    right: 15px;
+    background-color: #ffe928;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#match .match1 .pants .domyos {
+    width: 94px;
+    height: 24px;
+    position: absolute;
+    top: 288px;
+    left: 251px;
+}
+
+#match .match1 .pants .domyos span {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+#match .match1 .pants .cName {
+    width: 231px;
+    height: 55px;
+    position: absolute;
+    top: 312px;
+    left: 189px;
+}
+
+#match .match1 .pants .cName span {
+    font-size: 18px;
+}
+
+#match .match1 .pants img {
+    position: absolute;
+    top: 45px;
+}
+
+#match .match1 .shoes {
+    width: 589px;
+    height: 429px;
+    position: absolute;
+    left: 1179px;
+    border: 1px solid #dcdddd;
+}
+
+#match .match1 .shoes .newPro {
+    width: 45px;
+    height: 25px;
+    position: absolute;
+    top: 33px;
+    left: 18px;
+    background-color: #8126a3;
+    font-size: 18px;
+    color: #fff;
+}
+
+#match .match1 .shoes .price {
+    width: 128px;
+    height: 45px;
+    position: absolute;
+    top: 36px;
+    right: 15px;
+    background-color: #ffe928;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#match .match1 .shoes .domyos {
+    width: 94px;
+    height: 24px;
+    position: absolute;
+    top: 288px;
+    left: 251px;
+}
+
+#match .match1 .shoes .domyos span {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+#match .match1 .shoes .cName {
+    width: 231px;
+    height: 55px;
+    position: absolute;
+    top: 312px;
+    left: 189px;
+}
+
+#match .match1 .shoes .cName span {
+    font-size: 18px;
+}
+
+#match .match1 .shoes img {
+    position: absolute;
+    top: 45px;
+}
+
+#match .match1 .shoesWhite {
+    width: 589px;
+    height: 429px;
+    position: absolute;
+    left: 565px;
+    top: 453px;
+    border: 1px solid #dcdddd;
+}
+
+#match .match1 .shoesWhite .newPro {
+    width: 45px;
+    height: 25px;
+    position: absolute;
+    top: 33px;
+    left: 18px;
+    background-color: #8126a3;
+    font-size: 18px;
+    color: #fff;
+}
+
+#match .match1 .shoesWhite .price {
+    width: 128px;
+    height: 45px;
+    position: absolute;
+    top: 36px;
+    right: 15px;
+    background-color: #ffe928;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#match .match1 #jacket {
+    width: 589px;
+    height: 429px;
+    position: absolute;
+    top: 453px;
+    left: 1179px;
+    border: 1px solid #dcdddd;
+}
+
+#match .match1 #jacket .newPro {
+    width: 45px;
+    height: 25px;
+    position: absolute;
+    top: 33px;
+    left: 18px;
+    background-color: #8126a3;
+    font-size: 18px;
+    color: #fff;
+}
+
+#match .match1 #jacket .price {
+    width: 128px;
+    height: 45px;
+    position: absolute;
+    top: 36px;
+    right: 15px;
+    background-color: #ffe928;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.match2 {
+    width: 1771px;
+    height: 970px;
+    position: absolute;
+    top: 1120px;
+}
+
+.match2 img {
+    position: absolute;
+    top: 84px;
+}
+
+.match3 {
+    width: 1771px;
+    height: 970px;
+    position: absolute;
+    top: 2090px;
+}
+
+.match3 img {
+    position: absolute;
+    top: 83px;
+}
+
+#recommend {
+    width: 2160px;
+    height: 1308px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#hotBot {
+    width: 2160px;
+    height: 1413px;
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#innovate {
+    width: 2160px;
+    height: 1495px;
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#innovate article {
+    width: 1770px;
+    height: 615px;
+    display: flex;
+    position: absolute;
+    top: 98px;
+}
+
+#innovate article a {
+    width: 878px;
+    height: 300px;
+    position: absolute;
+}
+
+#innovate article a .innovate-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#innovate article a .innovate-2 {
+    position: absolute;
+    top: 0;
+    left: 892px;
+}
+
+#innovate article a .innovate-3 {
+    position: absolute;
+    top: 315px;
+    left: 0;
+}
+
+#innovate article a .innovate-4 {
+    position: absolute;
+    top: 315px;
+    left: 892px;
+}
+
+#innovate article a img {
+    width: 878px;
+    height: 300px;
+    border-radius: 2px;
+}
+
+#innovate div {
+    width: 1770px;
+    height: 195px;
+    position: absolute;
+    top: 713px;
+    justify-content: center;
+}
+
+#innovate div span {
+    font-size: 58px;
+    font-weight: 900;
+    position: absolute;
+    top: 55px;
+    left: 765px;
+}
+
+#innovate aside {
+    width: 1770px;
+    height: 585px;
+    display: flex;
+    position: absolute;
+    top: 909px;
+}
+
+#innovate aside a {
+    width: 878px;
+    height: 586px;
+    position: absolute;
+}
+
+#innovate aside a .innovate-5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#innovate aside a .innovate-6 {
+    position: absolute;
+    top: 0;
+    left: 892px;
+}
+
+#innovate aside a img {
+    width: 878px;
+    height: 586px;
+}
+
+#recall {
+    width: 2160px;
+    height: 494px;
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#recall article {
+    width: 1770px;
+    height: 494px;
+    display: flex;
+    position: absolute;
+    top: 0;
+}
+
+#recall article img {
+    width: 1770px;
+    height: 494px;
+}
+
+#bottomTop {
+    width: 2160px;
+    height: 112px;
+    background-color: #0082c3;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#bottomTop article {
+    width: 1770px;
+    height: 112px;
+    display: flex;
+    position: absolute;
+    top: 0;
+}
+
+#bottomTop article img {
+    width: 1770px;
+    height: 112px;
+}
+
+#bottom {
+    width: 2160px;
+    height: 667px;
+    background-color: #edeff1;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#bottom article {
+    width: 1770px;
+    height: 669px;
+    display: flex;
+    position: absolute;
+    top: 0;
+}
+
+#bottom article img {
+    width: 1770px;
+    height: 669px;
+}

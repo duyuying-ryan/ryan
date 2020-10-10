@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <link rel="stylesheet" href="../gulp/sass/dist/css/reset.css">
+    <link rel="stylesheet" href="../gulp/sass/dist/css/scss.css">
+    <script src="../js/startMove.js"></script>
+
+    <!-- <link rel="stylesheet" href="../js/banner.js"> -->
+    <script>
+        window.onload = function() {
+            const oBanner = document.querySelector(".banner");
+            const oUl = document.querySelector(".banner .imgBox");
+            const aBtns = document.querySelectorAll(".banner .pointBox li");
+            const LeftANDRightBtn = document.querySelectorAll(".leftRightTabs a");
+            let iNow = 1;
+            let timer = null;
+            let isRunning = false;
+
+            timerInner();
+            for (var i = 0; i < aBtns.length; i++) {
+                aBtns[i].index = i;
+                aBtns[i].onclick = function() {
+                    iNow = this.index + 1;
+                    tab();
+                };
+            }
+
+            function timerInner() {
+                timer = setInterval(function() {
+                    iNow++;
+                    tab();
+                }, 2000);
+            }
+
+            function tab() {
+
+                console.log(iNow);
+                for (var i = 0; i < aBtns.length; i++) {
+                    aBtns[i].className = "";
+                }
+                if (iNow == aBtns.length + 1) {
+                    aBtns[0].className = "active";
+                } else if (iNow == 0) {
+                    aBtns[aBtns.length - 1].className = "active";
+                } else {
+                    aBtns[iNow - 1].className = "active";
+                }
+
+
+                isRunning = true;
+                startMove(oUl, {
+                    left: iNow * -2160
+                }, function() {
+                    if (iNow == aBtns.length + 1) {
+                        iNow = 1;
+                        oUl.style.left = -2160 + "px";
+                    } else if (iNow == 0) {
+                        iNow = 5;
+                        oUl.style.left = iNow * -2160 + "px";
+                    }
+                    isRunning = false;
+                });
+            }
+            oBanner.onmouseenter = function() {
+                clearInterval(timer);
+            };
+            oBanner.onmouseleave = function() {
+                timerInner();
+            };
+            LeftANDRightBtn[0].onclick = function() {
+                if (!isRunning) {
+                    iNow--;
+                    tab();
+                }
+                return false;
+            };
+
+            LeftANDRightBtn[1].onclick = function() {
+                if (!isRunning) {
+                    iNow++;
+                    tab();
+                }
+                return false;
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <ul id="header">
+        <li id="classify">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg" id="bi-right">
+                <path fill-rule="evenodd" d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z"/>
+              </svg>
+            <span> 分类</span>
+            <ul>
+                <li>所有运动</li>
+                <li>运动服饰</li>
+                <li>运动鞋袜</li>
+                <li>运动装备</li>
+                <li>特惠专区</li>
+                <li>生态设计</li>
+                <li>保养维修</li>
+                <li>个性定制</li>
+            </ul>
+            <!-- hover后的效果 -->
+            <!-- <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-filter-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
+                <path fill-rule="evenodd" d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+              </svg> -->
+        </li>
+        <li id="logo-image">
+            <a href="https://www.decathlon.com.cn/"><img src="../images/ia_300000000.svg" alt=""></a>
+        </li>
+        <li id="search">
+            <section class="box">
+                <aside>
+                    <svg width="27px" height="27px" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                      </svg>
+                </aside>
+            </section>
+        </li>
+        <li id="aid">
+            <svg width="22px" height="22px" viewBox="0 0 16 16" class="bi bi-question-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+              </svg>
+            <span>帮助</span>
+        </li>
+        <li id="shop">
+            <svg width="22px" height="22px" viewBox="0 0 16 16" class="bi bi-shop" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+              </svg>
+            <span>门店</span>
+        </li>
+        <li id="account">
+            <svg width="22px" height="22px" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+              </svg>
+            <span>账户</span>
+        </li>
+        <li id="shopping-trolley">
+            <svg width="22px" height="22px" viewBox="0 0 16 16" class="bi bi-minecart-loaded" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M4 15a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 1a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8-1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 1a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM.115 3.18A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 14 12H2a.5.5 0 0 1-.491-.408l-1.5-8a.5.5 0 0 1 .106-.411zm.987.82l1.313 7h11.17l1.313-7H1.102z"/>
+                <path fill-rule="evenodd" d="M6 1a2.498 2.498 0 0 1 4 0c.818 0 1.545.394 2 1 .67 0 1.552.57 2 1h-2c-.314 0-.611-.15-.8-.4-.274-.365-.71-.6-1.2-.6-.314 0-.611-.15-.8-.4a1.497 1.497 0 0 0-2.4 0c-.189.25-.486.4-.8.4-.507 0-.955.251-1.228.638-.09.13-.194.25-.308.362H3c.13-.147.401-.432.562-.545a1.63 1.63 0 0 0 .393-.393A2.498 2.498 0 0 1 6 1z"/>
+              </svg>
+            <span>购物车</span>
+            <aside>
+                <span>0</span>
+            </aside>
+        </li>
+    </ul>
+    <!-- banner -->
+    <section class="banner">
+        <ul class="imgBox clearFix">
+
+            <li><img src="../images/banner5.png" alt=""></li>
+            <li><img src="../images/banner1.png" alt=""></li>
+            <li><img src="../images/banner2.png" alt=""></li>
+            <li><img src="../images/banner3.png" alt=""></li>
+            <li><img src="../images/banner4.png" alt=""></li>
+            <li><img src="../images/banner5.png" alt=""></li>
+            <li><img src="../images/banner1.png" alt=""></li>
+        </ul>
+        <ol class="pointBox">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <aside class="leftRightTabs">
+            <a href="#" class="left">
+                <svg width="55px" height="106px" viewBox="0 0 16 16" class="bi bi-chevron-compact-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+                  </svg>
+            </a>
+            <a href="#" class="right">
+                <svg width="55px" height="106px" viewBox="0 0 16 16" class="bi bi-chevron-compact-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+                  </svg>
+            </a>
+        </aside>
+    </section>
+    <!-- body -->
+    <div id="selectBox">
+        <section id="select">
+            <aside class="selectTitle">
+                <h1>80+种运动 任你挑选</h1>
+            </aside>
+            <article class="selTop">
+                <a><img src="../images/sel1.png" alt=""><span>健身</span></a>
+                <a><img src="../images/sel2.png" alt=""><span>跑步</span></a>
+                <a><img src="../images/sel3.png" alt=""><span>自行车</span></a>
+                <a><img src="../images/sel4.png" alt=""><span>一日徒步</span></a>
+                <a><img src="../images/sel5.png" alt=""><span>户外露营</span></a>
+                <a><img src="../images/sel6.png" alt=""><span>多日徒步</span></a>
+            </article>
+            <article class="selT">
+                <a><img src="../images/sel7.png" alt=""><span>基础健身/普拉提</span></a>
+                <a><img src="../images/sel8.png" alt=""><span>瑜伽</span></a>
+                <a><img src="../images/sel9.png" alt=""><span>儿童体能</span></a>
+                <a><img src="../images/sel10.png" alt=""><span>帆船</span></a>
+                <a><img src="../images/sel11.png" alt=""><span>足球</span></a>
+                <a><img src="../images/sel12.png" alt=""><span>篮球</span></a>
+            </article>
+            <article class="toSeeAll">
+                <aside class="toSee"><span>查看所有运动</span></aside>
+            </article>
+        </section>
+    </div>
+    <section class="particularsBox">
+        <article class="particulars">
+            <aside><img src="../images/parti1.jpg" alt=""></aside>
+            <aside><img src="../images/parti2.jpg" alt=""></aside>
+            <aside><img src="../images/parti3.jpg" alt=""></aside>
+            <aside><img src="../images/parti4.jpg" alt=""></aside>
+        </article>
+    </section>
+    <!-- match -->
+    <section id="match">
+        <aside><span>侬说搭配</span></aside>
+        <article class="match1">
+            <aside class="child">
+                <div class="seeMore"><span>查看更多产品</span></div>
+                <img src="../images/match1.jpg" alt="">
+            </aside>
+            <aside class="pants">
+                <div class="newPro">&nbsp;新品</div>
+                <div class="price">&nbsp;￥59.90</div>
+                <div class="domyos"><span>DOMYOS</span></div>
+                <div class="cName"><span>幼童体能保暖长裤&nbsp;120系-淡蓝色</span></div>
+                <img src="../images/match2.jpg" alt="">
+
+            </aside>
+            <aside class="shoes">
+                <div class="newPro">&nbsp;新品</div>
+                <div class="price">&nbsp;￥69.90</div>
+
+                <img src="../images/match3.jpg" alt="">
+
+            </aside>
+            <aside class="shoesWhite">
+                <div class="newPro">&nbsp;新品</div>
+                <div class="price">&nbsp;￥79.90</div>
+
+                <img src="../images/match4.jpg" alt="">
+
+            </aside>
+            <aside id="jacket">
+                <div class="newPro">&nbsp;新品</div>
+                <div class="price">&nbsp;￥89.90</div>
+                <img src="../images/match5.jpg" alt="">
+
+            </aside>
+        </article>
+        <article class="match2"><img src="../images/first2.png" alt=""></article>
+        <article class="match3"><img src="../images/first3.png" alt=""></article>
+    </section>
+    <!-- recommend -->
+    <section id="recommend">
+        <article><img src="../images/recommend.png" alt=""></article>
+    </section>
+    <!-- hotBot -->
+    <section id="hotBot">
+        <article><img src="../images/hotBot.png" alt=""></article>
+    </section>
+    <!-- innovate  -->
+    <section id="innovate">
+        <article>
+            <a><img src="../images/ia_100000004191.jpg" alt="" class="innovate-1"></a>
+            <a><img src="../images/ia_100000004192.jpg" alt="" class="innovate-2"></a>
+            <a> <img src="../images/ia_100000004193.jpg" alt="" class="innovate-3"></a>
+            <a> <img src="../images/ia_100000004194.jpg" alt="" class="innovate-4"></a>
+
+        </article>
+        <div><span>创新产品</span></div>
+        <aside>
+            <a><img src="../images/ia_100000004195.jpg" alt="" class="innovate-5"></a>
+            <a><img src="../images/ia_100000004196.jpg" alt="" class="innovate-6"></a>
+        </aside>
+    </section>
+    <!-- recall -->
+    <section id="recall">
+        <article><img src="../images/recall.png" alt=""></article>
+    </section>
+    <!-- bottomTop -->
+    <section id="bottomTop">
+        <article><img src="../images/bottomTop.png" alt=""></article>
+    </section>
+    <!-- bottom -->
+    <section id="bottom">
+        <article><img src="../images/bottom.png" alt=""></article>
+    </section>
+</body>
+
+</html>

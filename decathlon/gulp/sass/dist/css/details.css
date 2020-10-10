@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* header */
+
+#header {
+    height: 81px;
+    width: 2160px;
+    background-color: red;
+    position: relative;
+}
+
+#header #classify {
+    width: 139px;
+    height: 81px;
+    float: left;
+    display: flex;
+    background-color: #edeff1;
+    position: relative;
+}
+
+#header #classify #bi-right {
+    position: absolute;
+    top: 25px;
+    display: flex;
+    left: 30px;
+}
+
+#header #classify span {
+    font-size: 18px;
+    font-weight: 800;
+    color: #575859;
+    line-height: 81px;
+    position: relative;
+    left: 71px;
+    display: flex;
+}
+
+#header #logo-image {
+    width: 375px;
+    height: 81px;
+    background-color: #ffffff;
+    float: left;
+    display: flex;
+    position: relative;
+}
+
+#header #logo-image img {
+    width: 316px;
+    height: 45px;
+    display: flex;
+    position: absolute;
+    top: 21%;
+    left: 7.4%;
+}
+
+#header #search {
+    width: 1104px;
+    height: 81px;
+    background-color: #ffffff;
+    float: left;
+    display: flex;
+    position: relative;
+}
+
+#header #search section {
+    width: 1084px;
+    height: 53px;
+    background-color: #edeff1;
+    position: absolute;
+    display: flex;
+    top: 17%;
+}
+
+#header #search section aside {
+    width: 9.7%;
+    height: 93%;
+    display: flex;
+    background-color: #ffffff;
+    position: absolute;
+    right: 0;
+    border: 2px solid #e2e4e6;
+}
+
+#header #search section aside svg {
+    position: absolute;
+    top: 25.9%;
+    left: 37.8%;
+    color: #0082c3;
+    display: flex;
+}
+
+#header #aid {
+    width: 126px;
+    height: 77px;
+    background-color: #ffffff;
+    float: left;
+    display: flex;
+    border: 2px solid #eef0f2;
+    position: relative;
+}
+
+#header #aid svg {
+    color: #575859;
+    position: absolute;
+    left: 35px;
+    top: 30px;
+}
+
+#header #aid span {
+    color: #575859;
+    font-size: 19px;
+    position: absolute;
+    top: 27px;
+    left: 64px;
+}
+
+#header #shop {
+    width: 126px;
+    height: 77px;
+    display: flex;
+    background-color: #ffffff;
+    float: left;
+    border: 2px solid #eef0f2;
+    border-left: none;
+    position: relative;
+}
+
+#header #shop svg {
+    color: #575859;
+    position: absolute;
+    left: 35px;
+    top: 30px;
+}
+
+#header #shop span {
+    color: #575859;
+    font-size: 19px;
+    position: absolute;
+    top: 27px;
+    left: 64px;
+}
+
+#header #account {
+    width: 126px;
+    height: 77px;
+    display: flex;
+    background-color: #ffffff;
+    float: left;
+    border: 2px solid #eef0f2;
+    border-left: none;
+    border-right: none;
+    position: relative;
+}
+
+#header #account svg {
+    color: #575859;
+    position: absolute;
+    left: 35px;
+    top: 30px;
+}
+
+#header #account span {
+    color: #575859;
+    font-size: 19px;
+    position: absolute;
+    top: 27px;
+    left: 64px;
+}
+
+#header #shopping-trolley {
+    width: 158px;
+    height: 81px;
+    background-color: #ffea28;
+    float: right;
+    position: relative;
+}
+
+#header #shopping-trolley svg {
+    color: #575859;
+    position: absolute;
+    right: 104px;
+    top: 30px;
+}
+
+#header #shopping-trolley span {
+    color: #575859;
+    font-size: 20px;
+    position: absolute;
+    top: 29px;
+    right: 37px;
+}
+
+#header #shopping-trolley aside {
+    width: 26px;
+    height: 26px;
+    background-color: #0082c3;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    border-radius: 50%;
+}
+
+#header #shopping-trolley aside span {
+    font-size: 11px;
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    left: 9px;
+}
+
+
+/* details1 */
+
+#details1 {
+    width: 2160px;
+    height: 1097px;
+    position: relative;
+}
+
+#details1 #small {
+    width: 620px;
+    height: 620px;
+    position: absolute;
+    top: 262px;
+    left: 461px;
+}
+
+#details1 #mark {
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+
+#details1 #big {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    border: 1px solid grey;
+    top: 262px;
+    left: 1115px;
+    display: none;
+    overflow: hidden;
+}
+
+#details1 #big img {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#details2 {
+    width: 2160px;
+    height: 5730px;
+    position: relative;
+}
+
+#details2 article {
+    position: absolute;
+    left: 195px;
+}
